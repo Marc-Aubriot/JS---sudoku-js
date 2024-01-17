@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link rel="stylesheet" href="styles/sudoku.css">
+        <link rel="stylesheet" href="styles/dropdown.css">
+
+        <title>Sudoku JS</title>
+    </head>
+    <body>
+        <header>
+            <div class="dropdown">
+                <button type="button" class="dropbtn" onclick="dropdown()">Thème</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <ol>
+                        <li>
+                            <button type="button" onclick="themeChanger('clair')">Clair</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="themeChanger('obscur')">Obscur</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="themeChanger('jungle')">Jungle</button>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </header>
+        <nav></nav>
+        <main>
+          
+            <h1>SUDOKU JS</h1>
+
+            <div class="mainGrille" id="mainGrid">
+                <div class="subGrille" id="subG1"> </div>
+                <div class="subGrille" id="subG2"></div>
+                <div class="subGrille" id="subG3"></div>
+                <div class="subGrille" id="subG4"></div>
+                <div class="subGrille" id="subG5"></div>
+                <div class="subGrille" id="subG6"></div>
+                <div class="subGrille" id="subG7"></div>
+                <div class="subGrille" id="subG8"></div>
+                <div class="subGrille" id="subG9"></div>
+            </div>
+            
+            <div class="options">
+                    <select name="difficulty" id="difficultySelecter">
+                        <option value="15">Facile</option>
+                        <option value="25" selected>Normal</option>
+                        <option value="35">Difficile</option>
+                        <option value="45">Expert</option>
+                    </select>
+
+                <button type="button" id="launchGameBtn" >Nouveau Sudoku</button>
+                <button type="button" id="correctionBtn" >Voir la solution</button>
+            </div>
+            <div class="mainGrille" id="correctionMainGrid">
+                <div class="subGrille" id="correctionSubG1"></div>
+                <div class="subGrille" id="correctionSubG2"></div>
+                <div class="subGrille" id="correctionSubG3"></div>
+                <div class="subGrille" id="correctionSubG4"></div>
+                <div class="subGrille" id="correctionSubG5"></div>
+                <div class="subGrille" id="correctionSubG6"></div>
+                <div class="subGrille" id="correctionSubG7"></div>
+                <div class="subGrille" id="correctionSubG8"></div>
+                <div class="subGrille" id="correctionSubG9"></div>
+            </div>
+        
+        </main>
+        <footer></footer>
+        <script src="script/dropdown.js"></script>
+        <script src="script/sudoku.js"></script>
+    </body>
+</html>

@@ -1,0 +1,216 @@
+body {
+    background-color: rgb(224, 218, 218);
+    background-image: url("../images/sable-plage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+header {
+    background-color: rgba(0,0,0,0);
+}
+
+main {
+    margin: 0 auto;
+    width: 100vh;
+    height: 95vh;
+    /*border: 3px solid black;*/
+    padding: 1vh;
+    /*background-color:beige;*/
+    transition: background-color 0.4s, color 0.4s;
+}
+    
+h1 {
+    text-align: center;
+}
+    
+li {
+    list-style-type: none;
+}
+
+/* grille principale du sudoku */
+.mainGrille {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    padding: 0;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 1px solid black;
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: rgba(255, 235, 205, 0.8);
+    transition: background-color 0.4s, color 0.4s;
+
+}
+
+.options {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+select {
+    width: 10%;
+    border-radius: 10px;
+    color: rgb(132, 180, 235);
+    border: 2px solid rgb(132, 180, 235);
+    padding: 10px 24px;
+    background-color: white;
+    font-size: 15px;
+    transition: background-color 0.4s, color 0.4s;
+}
+select:hover {
+    background-color: rgb(132, 180, 235);
+    color: white;
+}
+
+button {
+    background-color: white;
+    color: rgb(132, 180, 235);
+    border-radius: 10px;
+    transition: background-color 0.4s, color 0.4s;
+    border: 2px solid rgb(132, 180, 235);
+    padding: 10px 24px;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: rgb(132, 180, 235);
+    color: white;
+}
+
+.subGrille {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    padding: 0;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 1px solid black;
+    
+}
+
+p {
+    font-size: 3rem;
+    text-align: center;
+    border: 1px solid black;
+    margin: 0;
+    padding-top: 10%;
+    color: black;
+}
+
+.sudoku_cell-hidden {
+    color: blue;
+}
+
+.sudoku_cell-hidden:focus {
+    background-color: rgba(181, 190, 181, 0.5);
+}
+
+
+/* thème jungle */
+select.jungle {
+    color: rgb(40, 235, 33);
+    border: 2px solid rgb(40, 235, 33);
+}
+
+select.jungle:hover {
+    background-color: rgb(40, 235, 33);
+    color: white;
+
+}
+
+button.jungle {
+    border: 2px solid rgb(40, 235, 33);
+    color: rgb(40, 235, 33);
+}
+
+button.jungle:hover {
+    background-color: rgb(40, 235, 33);
+    color: white;
+}
+
+
+/* thème obscur */
+select.obscur {
+    border: 2px solid black;
+    background-color: rgb(100, 102, 101);
+    color: white;
+}
+
+select.obscur:hover {
+    background-color: rgb(100, 102, 101);
+    color: black;
+}
+
+button.obscur {
+    border: 2px solid black;
+    background-color: rgb(100, 102, 101);
+    color: white;
+}
+
+button.obscur:hover {
+    background-color: rgb(100, 102, 101);
+    color: black;
+}
+
+/* BALLONS */
+body {
+    margin: 0;
+  }
+  
+#balloon-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+  
+.balloon {
+    height: 125px;
+    width: 105px;
+    border-radius: 75% 75% 70% 70%;
+    position: relative;
+}
+  
+.balloon:before {
+    content: "";
+    height: 75px;
+    width: 1px;
+    padding: 1px;
+    background-color: #FDFD96;
+    display: block;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+  
+.balloon:after {
+    content: "▲";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes float {
+    from {transform: translateY(100vh);
+    opacity: 1;}
+    to {transform: translateY(-300vh);
+    opacity: 0;}
+}
